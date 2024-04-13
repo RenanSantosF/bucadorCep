@@ -1,9 +1,11 @@
 import exibeCep from "./exibeCep.js";
 import alerta from "./alerta.js";
+const display = document.getElementById("displayCep");
 
 export default function manipulaCep(input, spanAlert) {
   if (input.value.length < 2) {
     alerta("Informe o Endereço com no mínimo 2(dois) caracteres!");
+    display.classList.remove('active')
   } else {
     let cep = removeCaracteresIndesejados(input.value);
     api(cep, spanAlert);
@@ -18,6 +20,7 @@ async function api(element, spanAlert) {
 
     if (!response.ok) {
       alerta("Cep não encontrado!");
+      display.classList.remove('active')
       throw new Error("Erro ao fazer a solicitação");
     }
 
@@ -25,6 +28,7 @@ async function api(element, spanAlert) {
 
     exibeCep(data, spanAlert);
   } catch (error) {
+    display.classList.remove('active')
     alerta("Cep não encontrado!");
   }
 }

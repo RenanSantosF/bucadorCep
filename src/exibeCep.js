@@ -13,6 +13,7 @@ export default function exibeCep(element) {
   if (element.uf) {
     ajustaTabela(element, display, rua, bairro, cidade, ddd, activeTd, itemTh);
   } else {
+    display.classList.remove('active')
     alerta("Cep não encontrado!");
   }
 }

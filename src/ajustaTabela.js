@@ -9,6 +9,7 @@ export default function ajustaTabela(
   itemTh
 ) {
   if (window.innerWidth > 800) {
+    console.log(element)
     display.classList.add("active");
     rua.innerHTML = element.logradouro;
     bairro.innerHTML = element.bairro;
