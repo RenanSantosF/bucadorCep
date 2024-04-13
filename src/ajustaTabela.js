@@ -12,7 +12,7 @@ export default function ajustaTabela(
     display.classList.add("active");
     rua.innerHTML = element.logradouro;
     bairro.innerHTML = element.bairro;
-    cidade.innerHTML = element.localidade;
+    cidade.innerHTML = `${element.localidade}/${element.uf}`;
     ddd.innerHTML = element.ddd;
   } else {
     activeTd.forEach((item) => {
