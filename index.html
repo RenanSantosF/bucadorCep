@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module" src="src/index.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="container">
+      <div class="title">
+        <h1>Buscador de Cep</h1>
+      </div>
+      <div id="buscar">
+        <input id="input" type="text" placeholder="Insira o cep" />
+        <button id="btnBuscar">Buscar</button>
+      </div>
+
+      <div class="alert" id="alert">a</div>
+
+      <table id="displayCep">
+        <thead>
+          <tr>
+            <th class="itemTh">Rua</th>
+            <th class="itemTh">Bairro</th>
+            <th class="itemTh">Cidade</th>
+            <th class="itemTh">DDD</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="item" id="rua"></td>
+            <td class="item" id="bairro"></td>
+            <td class="item" id="cidade"></td>
+            <td class="item" id="ddd"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>
